@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "author": "Rafael Corsi",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": -3.25,
+      "left": 3.55,
+      "attrs": {
+        "builder": "pico-sdk"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": -49.3,
+      "left": 124.6,
+      "attrs": {
+        "value": "512"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot2",
+      "top": -49.3,
+      "left": 220.6,
+      "attrs": {
+        "value": "125"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "pico:GP0",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "pico:GP1",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "pico:GND.8",
+      "pot1:GND",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "pot1:GND",
+      "pot2:GND",
+      "black",
+      [
+        "v9.6",
+        "h96"
+      ]
+    ],
+    [
+      "pot2:VCC",
+      "pico:3V3",
+      "red",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "pot1:VCC",
+      "pico:3V3",
+      "red",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "pico:GP27",
+      "pot1:SIG",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "pico:GP26",
+      "pot2:SIG",
+      "green",
+      [
+        "h0"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}

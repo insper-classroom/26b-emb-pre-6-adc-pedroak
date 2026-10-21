@@ -1,0 +1,78 @@
+name: exe4
+author: Rafael Corsi
+version: 1
+
+steps:
+  - delay: 200ms
+
+  - set-control:
+      part-id: pot1
+      control: position
+      value: 0
+  - delay: 40ms
+
+  - expect-pin:
+      part-id: led1
+      pin: A
+      value: 0
+
+  - set-control:
+      part-id: pot1
+      control: position
+      value: 0.6
+
+  - wait-pin:
+      part-id: led1
+      pin: A
+      value: 1
+
+  - wait-pin:
+      part-id: led1
+      pin: A
+      value: 0
+
+  - set-control:
+      part-id: pot1
+      control: position
+      value: 0
+
+  - delay: 200 ms
+
+  - expect-pin:
+      part-id: led1
+      pin: A
+      value: 0
+
+  - delay: 200 ms
+
+  - expect-pin:
+      part-id: led1
+      pin: A
+      value: 0
+
+  - set-control:
+      part-id: pot1
+      control: position
+      value: 0.9
+
+  - wait-pin:
+      part-id: led1
+      pin: A
+      value: 1
+
+  - wait-pin:
+      part-id: led1
+      pin: A
+      value: 0
+
+  - set-control:
+      part-id: pot1
+      control: position
+      value: 0
+
+  - delay: 60 ms
+
+  - expect-pin:
+      part-id: led1
+      pin: A
+      value: 0

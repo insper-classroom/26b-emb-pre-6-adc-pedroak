@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "author": "Rafael Corsi",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico",
+      "id": "pico",
+      "top": -3.25,
+      "left": 3.55,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 15.6,
+      "left": -82.6,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot1",
+      "top": 5,
+      "left": 123.8,
+      "attrs": { "travelLength": "30", "value": "0" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "led1:A", "pico:GP4", "green", [ "v0" ] ],
+    [ "led1:C", "pico:GND.2", "black", [ "v0" ] ],
+    [ "pot1:GND", "pico:GND.8", "black", [ "v-38.4", "h-234.8", "v19.2" ] ],
+    [ "pot1:VCC", "pico:3V3", "red", [ "h0" ] ],
+    [ "pot1:SIG", "pico:GP28", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}

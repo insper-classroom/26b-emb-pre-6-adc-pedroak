@@ -1,0 +1,22 @@
+name: exe1
+author: Rafael Corsi
+version: 1
+
+steps:
+  - wait-serial: '28'
+  - wait-serial: '47'
+  - wait-serial: '89'
+  - wait-serial: '127' 
+  - wait-serial: '155' 
+  - wait-serial: '172' 
+  - wait-serial: '193' 
+  - wait-serial: '198' 
+  - wait-serial: '212' 
+  - wait-serial: '227' 
+  - wait-serial: '234' 
+  - wait-serial: '242' 
+  - wait-serial: '246' 
+  - wait-serial: '246' 
+  - wait-serial: '249' 
+  - wait-serial: '249' 
+  - wait-serial: '243' 

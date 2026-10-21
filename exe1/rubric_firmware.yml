@@ -1,0 +1,6 @@
+required:
+  - names:
+      - xSemaphoreCreateMutex
+      - xSemaphoreTake
+      - xSemaphoreGive
+    error_text: Crie e use um mutex para proteger o printf.

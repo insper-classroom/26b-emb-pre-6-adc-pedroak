@@ -1,0 +1,13 @@
+name: exe1
+author: Rafael Corsi
+version: 1
+
+steps:
+  - delay: 300ms
+  - wait-serial: 'voltage 1: 1.650806 V'
+  - wait-serial: 'voltage 2: 0.402832 V'
+
+  
+
+
+ 
