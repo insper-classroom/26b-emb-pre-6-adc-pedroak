@@ -31,8 +31,8 @@ int main() {
     gpio_put(PIN_LED_B, 0);
 
     adc_init();
-    adc_gpio_init(27);
-    adc_select_input(1);
+    adc_gpio_init(28);
+    adc_select_input(2);
 
     // timer que dispara a leitura do ADC
     repeating_timer_t timer_adc;
